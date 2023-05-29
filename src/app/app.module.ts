@@ -7,6 +7,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { DetailComponent } from './components/detail/detail.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AdministrationComponent } from './components/administration/administration.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,11 +17,15 @@ import { DetailComponent } from './components/detail/detail.component';
     HeaderComponent,
     FooterComponent,
     GalleryComponent,
-    DetailComponent
+    DetailComponent,
+    AdministrationComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

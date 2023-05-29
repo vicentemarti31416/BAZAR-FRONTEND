@@ -1,20 +1,20 @@
 @font-face {
     font-family: 'Bodoni-Antiqua';
-    src: url('/src/assets/fonts/Bodoni-Antiqua.otf');
+    src: url('assets/fonts/Bodoni-Antiqua.otf');
 }
 
 @font-face {
     font-family: 'Futura-Light';
-    src: url('/src/assets/fonts/Futura-Light.otf');
+    src: url('assets/fonts/Futura-Light.otf');
 }
 
 @font-face {
-    font-family: 'Helvetica Neue Regular';
-    src: url('/src/assets/fonts/Helvetica Neue Regular');
+    font-family: 'HelveticaNeueRegular.otf';
+    src: url('assets/fonts/HelveticaNeueRegular.otf');
 }
 
 body {
-    font-family: 'Helvetica Neue Regular', Arial, Helvetica, sans-serif;
+    font-family: 'HelveticaNeueRegular', Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -37,3 +37,9 @@ button {
     padding: 0;
 }
 
+.header {
+
+}
+.footer {
+    
+}

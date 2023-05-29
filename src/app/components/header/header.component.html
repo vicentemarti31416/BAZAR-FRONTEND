@@ -25,7 +25,7 @@
             <div class="header__menu-misc">
                 <ul class="header__menu-misc-list">
                     <li><a href="">INICIAR</a></li>
-                    <li><a href="">AYUDA</a></li>
+                    <li><a [routerLink]="['/administration']">ADMINISTRAR</a></li>
                     <li><a href=""><svg class="header__shop-cart-icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="inherit" stroke="inherit"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.708 5a2.5 2.5 0 0 1 4.584 0H9.708zM8.645 5a3.502 3.502 0 0 1 6.71 0H19v15H5V5h3.645zM6 6v13h12V6H6z"></path></svg></a></li>
                 </ul>
             </div>
@@ -45,7 +45,7 @@
         <button class="header__menu-button">
             <svg class="header__menu-icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="inherit" stroke="inherit"><path fill-rule="evenodd" clip-rule="evenodd" d="M20.4 5.9H3.6v-1h16.8v1zm0 6.6H3.6v-1h16.8v1zm0 6.6H3.6v-1h16.8v1z"></path></svg>
         </button>
-        <button class="header__button-filtros">FILTROS</button>
+        <button class="header__button-filtros" [routerLink]="['/administration']">ADMINISTRAR</button>
         <div class="header__menu-right">
             <button class="header__button-gallery">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-border-all" viewBox="0 0 16 16">

@@ -1,68 +1,87 @@
-.main {
+.main-detail {
     font-weight: 50;
     color: #777;
+
     p {
         font-size: 14px;
         line-height: 1.5rem;
     }
 
-    h3, h4, h5 {
+    h3,
+    h4,
+    h5 {
         font-weight: 100;
     }
+
     .main-container {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         max-width: 1700px;
         margin: auto;
+
         .main__content-left {
             max-width: 300px;
         }
+
         .main__content-center {
             .main__image {
                 max-width: 600px;
                 height: auto;
             }
         }
+
         .main__content-right {
             width: 400px;
+
             .main__content-right__upper {
                 display: flex;
                 justify-content: space-between;
             }
+
             .content-right-price {
                 margin-block-start: 0;
             }
+
             .ul__color-selector {
                 display: flex;
                 gap: 16px;
                 margin: 2rem 0 1.25rem;
             }
+
             .color-selector {
                 width: 16px;
                 height: 16px;
                 border: 1px solid black;
             }
+
             .ul__size-selector {
                 border-top: 1px solid black;
                 border-bottom: 1px solid black;
                 margin: 3rem 0;
+
                 li {
                     margin: 1rem 0;
                 }
             }
+
             .main__content-right__lower {
                 display: flex;
                 justify-content: space-between;
                 margin-top: 3rem;
             }
+
             .button--add-cart {
                 border: 1px solid black;
                 margin: 1.5rem 0;
                 padding: 1rem 0;
                 width: 100%;
                 background-color: transparent;
+                color: #777;
+                font-weight: 100;
+                font-size: 16px;
             }
+
             .shipping-text {
                 margin-block-start: 0;
             }
@@ -73,4 +92,109 @@
 .button {
     background-color: transparent;
     border: none;
+}
+
+.main-detail__mobile {
+    display: none;
+}
+
+.footer-detail__mobile {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .app-header {
+        display: none;
+    }
+
+    .main-detail {
+        display: none;
+    }
+
+    .app-footer {
+        display: none;
+    }
+
+    .main-detail__mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+
+        .main-detail__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+
+            button {
+                border: none;
+                background-color: transparent;
+            }
+
+            .main-detail__header-right {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+        }
+
+        .main__gallery__img {
+            width: 100vw;
+            object-fit: cover;
+            object-position: center;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .footer-detail__mobile {
+        position: fixed;
+        bottom: 0;
+        background-color: white;
+        width: 100vw;
+        opacity: .9;
+        padding: 1rem;
+        box-sizing: border-box;
+
+        .footer-content {
+            .footer-content-upper {
+                display: flex;
+                justify-content: space-between;
+
+                .footer-content__text {
+                    p {
+                        font-size: 12px;
+                        color: #777;
+                    }
+                }
+
+                .ul__color-selector {
+                    display: flex;
+                    gap: 16px;
+                    margin: 2rem 0 1.25rem;
+                }
+
+                .color-selector {
+                    width: 16px;
+                    height: 16px;
+                    border: 1px solid black;
+                }
+            }
+
+            .footer-content-lower {
+                display: flex;
+                justify-content: space-between;
+                .button--add-cart {
+                    border: 1px solid black;
+                    margin: 1.5rem 0;
+                    padding: 1rem 0;
+                    width: 75%;
+                    background-color: transparent;
+                    color: #777;
+                    font-weight: 100;
+                }
+            }
+
+        }
+    }
 }

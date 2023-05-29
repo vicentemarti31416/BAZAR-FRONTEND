@@ -74,4 +74,17 @@ ul {
     .footer {
         margin: 1rem;
     }
+    .footer__lower-right {
+        margin-top: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 4rem;
+        ul {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: .75rem;
+        }
+    }
 }

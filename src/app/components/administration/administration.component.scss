@@ -1,0 +1,144 @@
+.main-administration {
+    max-width: 100vw;
+
+    .section-administration {
+
+        width: 500px;
+        margin: auto;
+
+        .form-administration {
+
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            input {
+
+                width: 100%;
+                border: none;
+                border-bottom: 1px solid #777;
+                padding: .75rem 0;
+            }
+
+            .input-file {
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .input-file__label {
+                width: 100%;
+                display: block;
+                text-align: center;
+                padding: 1rem;
+                border: 1px solid #777;
+                font-size: 20px;
+                color: #777;
+                font-weight: 50;
+                box-sizing: border-box;
+            }
+        }
+    }
+
+    .section-gallery {
+
+        margin: 2rem;
+        max-width: 100vw;
+        display: flex;
+
+        .gallery-content {
+
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 5rem;
+            gap: 2rem;
+
+            .card {
+                width: 400px;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 3rem;
+
+                img {
+                    width: 400px;
+                    height: 600px;
+                    object-fit: cover;
+                }
+
+                .button-container {
+                    .gallery-content__button {
+                        margin-top: 1rem;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+button {
+
+    width: 100%;
+    padding: 1rem;
+    background-color: transparent;
+    border: 1px solid #777;
+    font-size: 20px;
+    color: #777;
+    font-weight: 50;
+}
+
+::placeholder {
+    font-size: 20px;
+    color: #777;
+    font-weight: 50;
+    line-height: 24px;
+}
+
+@media (max-width: 600px) {
+
+    .main-administration {
+        max-width: 100vw;
+
+        .section-administration {
+
+            width: 100vw;
+            margin: auto;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+
+        .section-gallery {
+
+            margin: 0;
+            padding: 0;
+
+            .gallery-content {
+
+                margin: 0;
+                padding: 0;
+
+                .card {
+
+                    img {
+                        width: 100vw;
+                        max-width: 100vw;
+                        object-position: center;
+                        object-fit: cover;
+                    }
+
+                    .button-container {
+                        padding: 0 1rem;
+                        .gallery-content__button {
+                            margin-top: 1rem;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+}

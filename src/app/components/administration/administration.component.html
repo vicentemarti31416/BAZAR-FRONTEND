@@ -1,0 +1,29 @@
+<app-header class="app-header"></app-header>
+<main class="main-administration">
+    <section class="section-administration">
+        <form [formGroup]="productForm" class="form-administration">
+            <input id="name" placeholder="Nombre" type="text" name="name" formControlName="name">
+            <input id="description" placeholder="Description" type="text" name="description" formControlName="description">
+            <input id="price" placeholder="Precio" type="number" name="price" formControlName="price">
+            <input id="iva" placeholder="IVA" type="number" name="iva" formControlName="iva">
+            <input id="quantity" placeholder="Cantidad" type="number" name="quantity" formControlName="quantity">
+            <div class="input-file">
+                <label for="file-upload" class="input-file__label">Añadir imágen</label>
+                <input id="file-upload" type="file" style="display:none;" hidden="hidden" (change)="onFileChange($event)"/>
+            </div>
+            <button *ngIf="!product.id" type="submit" (click)="saveProduct(productForm)">Guardar producto</button>
+            <button *ngIf="product.id" type="submit" (click)="updateProduct(productForm)">Actualizar producto</button>
+        </form>
+    </section>
+    <section class="section-gallery">
+        <div class="gallery-content">
+            <div class="card" *ngFor="let photo of photos">
+                <img [src]="photo.url" alt="">
+                <div class="button-container">
+                    <button class="gallery-content__button" (click)="deletePhoto(photo, product)" type="button">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<app-footer class="app-footer"></app-footer>
