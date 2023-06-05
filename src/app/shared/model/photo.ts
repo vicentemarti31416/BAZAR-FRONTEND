@@ -1,7 +1,9 @@
 export class Photo {
 
-    id: number;
+    id: string;
     url: string;
     publicId: string;
     productId: string;
+    principal: boolean;
+    optionalColor: boolean;
 }

@@ -26,7 +26,7 @@ export class AdministrationComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe((paramMap) => {
-      let id: number = +paramMap.get('id');
+      let id: string = paramMap.get('id');
       if (id) {
         this.productService.findById(id).subscribe((response) => {
           this.product = response;
@@ -41,6 +41,10 @@ export class AdministrationComponent implements OnInit {
       name: [''],
       description: [''],
       price: [''],
+      hasColors: [],
+      colorName: [''],
+      colorCode: [''],
+      colorRgb: [''],
       iva: [''],
       quantity: [''],
       photos: this.fb.array([])
@@ -74,6 +78,7 @@ export class AdministrationComponent implements OnInit {
 
   saveProduct(productForm) {
     this.product.photos = this.photos;
+    console.log("save request = " + JSON.stringify(productForm.value));
     this.productService.save(productForm.value).subscribe((response) => {
       this.product = response as Product;
       console.log("save response = " + JSON.stringify(response));
@@ -82,6 +87,7 @@ export class AdministrationComponent implements OnInit {
 
   updateProduct(productForm) {
     this.product.photos = this.photos;
+    console.log("update request = " + JSON.stringify(productForm.value));
     this.productService.updateProduct(this.product).subscribe((response) => {
       this.product = response as Product;
       console.log("update response = " + JSON.stringify(response));

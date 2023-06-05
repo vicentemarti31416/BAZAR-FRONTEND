@@ -19,6 +19,7 @@
                 border: none;
                 border-bottom: 1px solid #777;
                 padding: .75rem 0;
+                padding-left: 10px;
             }
 
             .input-file {
@@ -36,6 +37,15 @@
                 color: #777;
                 font-weight: 50;
                 box-sizing: border-box;
+                cursor: pointer;
+            }
+
+            .form-aministration__button-save {
+                cursor: pointer;
+            }
+
+            .form-aministration__button-update {
+                cursor: pointer;
             }
         }
     }
@@ -67,7 +77,15 @@
                     object-fit: cover;
                 }
 
-                .button-container {
+                .buttons-container {
+
+                    .buttons-container__controls {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 1rem;
+                    }
+
                     .gallery-content__button {
                         margin-top: 1rem;
                     }
@@ -81,6 +99,7 @@
 
 button {
 
+    cursor: pointer;
     width: 100%;
     padding: 1rem;
     background-color: transparent;
@@ -111,12 +130,10 @@ button {
         }
 
         .section-gallery {
-
             margin: 0;
             padding: 0;
 
             .gallery-content {
-
                 margin: 0;
                 padding: 0;
 
@@ -129,8 +146,14 @@ button {
                         object-fit: cover;
                     }
 
-                    .button-container {
+                    .buttons-container {
                         padding: 0 1rem;
+                        
+
+                        .buttons-container__controls {
+                            
+                        }
+
                         .gallery-content__button {
                             margin-top: 1rem;
                         }

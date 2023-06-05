@@ -15,12 +15,16 @@ export class ProductService {
     private httpClient: HttpClient
   ) { }
 
-  public findAll(): Observable<Product[]> {
-    return this.httpClient.get<Product[]>(`${this.url}/`);
+  public findAll(): Observable<any[]> {
+    return this.httpClient.get<any[]>(`${this.url}/gallery`);
   }
 
-  public findById(id: number): Observable<Product> {
-    return this.httpClient.get<Product>(`${this.url}/${id}`);
+  public findById(id: string): Observable<Product> {
+    return this.httpClient.get<Product>(`${this.url}/id/${id}`);
+  }
+
+  public findByColorCode(colorCode: number): Observable<Product[]> {
+    return this.httpClient.get<Product[]>(`${this.url}/colorCode/${colorCode}`);
   }
 
   public save(product: Product): Observable<Product> {

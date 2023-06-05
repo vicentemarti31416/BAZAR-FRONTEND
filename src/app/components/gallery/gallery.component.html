@@ -2,35 +2,47 @@
 <main class="main-gallery">
     <section class="section">
         <div class="section__container-upper">
-            <a href=""><img class="main-image" src="assets/images/7380320916_2_4_1.jpg" alt=""></a>
+            <a [routerLink]="['/detail', productsWithColors[0]?.id]"><img class="main-image" src="{{ productsWithColors[0]?.photos[1].url }}" alt=""></a>
             <div class="section__text-container">
                 <h3>CAMISA TÉCNICA BOXY FIT</h3>
                 <p>29,95 EUR</p>
             </div>
         </div>
         <div class="section__continer-lower">
-            <a href=""><img src="assets/images/7380320800_6_1_1.jpg" alt=""></a>
-            <a href=""><img src="assets/images/7380320916_6_1_1.jpg" alt=""></a>
-            <a href=""><img src="assets/images/7380320251_6_1_1.jpg" alt=""></a>
+            <a [routerLink]="['/detail', productsWithColors[0]?.id]">
+                <img src="{{ productsWithColors[0]?.photos[productsWithColors[0].photos.length - 3].url }}" alt="">
+            </a>
+            <a [routerLink]="['/detail', productsWithColors[1]?.id]">
+                <img src="{{ productsWithColors[1]?.photos[productsWithColors[1].photos.length - 3].url }}" alt="">
+            </a>
+            <a [routerLink]="['/detail', productsWithColors[2]?.id]">
+                <img src="{{ productsWithColors[2]?.photos[productsWithColors[2].photos.length - 3].url }}" alt="">
+            </a>
         </div>
     </section>
     <section class="section">
         <div class="section__container-upper">
-            <img class="main-image" src="assets/images/2688351505_2_4_1.jpg" alt="">
+            <a [routerLink]="['/detail', productsWithColors[5]?.id]"><img class="main-image" src="{{ productsWithColors[5]?.photos[1].url }}" alt=""></a>
             <div class="section__text-container">
                 <h3>CAMISA FLUIDA BOLSILLO</h3>
                 <p>29,95 EUR</p>
             </div>
         </div>
         <div class="section__continer-lower">
-            <a href=""><img src="assets/images/2688351800_6_1_1.jpg" alt=""></a>
-            <a href=""><img src="assets/images/2688351505_6_1_1.jpg" alt=""></a>
-            <a href=""><img src="assets/images/2688351251_6_1_1.jpg" alt=""></a>
+            <a [routerLink]="['/detail', productsWithColors[3]?.id]">
+                <img src="{{ productsWithColors[3]?.photos[productsWithColors[3].photos.length - 3].url }}" alt="">
+            </a>
+            <a [routerLink]="['/detail', productsWithColors[4]?.id]">
+                <img src="{{ productsWithColors[4]?.photos[productsWithColors[4].photos.length - 3].url }}" alt="">
+            </a>
+            <a [routerLink]="['/detail', productsWithColors[5]?.id]">
+                <img src="{{ productsWithColors[5]?.photos[productsWithColors[5].photos.length - 3].url }}" alt="">
+            </a>
         </div>
     </section>
     <section class="section">
         <div class="section__container-upper">
-            <a href=""><img class="main-image" src="assets/images/8574462615_2_1_1.jpg" alt=""></a>
+            <a [routerLink]="['/detail', productsWithoutColors[5]?.id]"><img class="main-image" src="{{ productsWithoutColors[5]?.photos[1].url }}" alt=""></a>
             <div class="section__text-container">
                 <h3>CAMISA BORDADO STANDARD PROCEDURE ®</h3>
                 <p>CAMISA RELAXED FIT CONFECCIONADA EN TEJIDO DE VISCOSA. CUELLO BOWLING Y MANGA CORTA. LOGO BORDADO DE STANDARD PROCEDURE ® EN DELANTERO. CIERRE FRONTAL DE BOTONADURA.</p>
@@ -38,10 +50,16 @@
             </div>
         </div>
         <div class="section__continer-lower">
-            <a href=""><img src="assets/images/0794409800_2_1_1.jpg" alt=""></a>
-            <a href=""><img src="assets/images/5039350612_2_1_1.jpg" alt=""></a>
-            <a href=""><img src="assets/images/4231414801_2_1_1.jpg" alt=""></a>
-            <a href=""><img src="assets/images/4748523800_2_1_1.jpg" alt=""></a>
+            <a [routerLink]="['/detail', productsWithoutColors[6]?.id]"><img src="{{ productsWithoutColors[6]?.photos[1].url }}" alt=""></a>
+            <a [routerLink]="['/detail', productsWithoutColors[7]?.id]"><img src="{{ productsWithoutColors[7]?.photos[1].url }}" alt=""></a>
+            <a [routerLink]="['/detail', productsWithoutColors[8]?.id]"><img src="{{ productsWithoutColors[8]?.photos[1].url }}" alt=""></a>
+            <a [routerLink]="['/detail', productsWithoutColors[9]?.id]"><img src="{{ productsWithoutColors[9]?.photos[1].url }}" alt=""></a>
+        </div>
+        <div class="section__continer-lower">
+            <a [routerLink]="['/detail', productsWithoutColors[0]?.id]"><img src="{{ productsWithoutColors[0]?.photos[1].url }}" alt=""></a>
+            <a [routerLink]="['/detail', productsWithoutColors[1]?.id]"><img src="{{ productsWithoutColors[1]?.photos[1].url }}" alt=""></a>
+            <a [routerLink]="['/detail', productsWithoutColors[2]?.id]"><img src="{{ productsWithoutColors[2]?.photos[1].url }}" alt=""></a>
+            <a [routerLink]="['/detail', productsWithoutColors[4]?.id]"><img src="{{ productsWithoutColors[4]?.photos[1].url }}" alt=""></a>
         </div>
     </section>
 </main>

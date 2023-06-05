@@ -29,6 +29,13 @@
             justify-content: center;
             flex-wrap: wrap;
             gap: 2rem;
+
+            a {
+                img {
+                    width: 375px;
+                    height: auto;
+                }
+            }
         }
     }
 }
